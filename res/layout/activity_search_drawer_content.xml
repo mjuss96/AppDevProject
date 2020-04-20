@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+    <EditText
+        android:height="80dp"
+        android:id="@+id/editTextSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="@string/search"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/ButtonTextSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ButtonTextSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_search_category_default" />
+
+    <TextView
+        android:id="@+id/SearchActivityCategoriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/categories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearch" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxHair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/hair"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchActivityCategoriesTextView" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxMakeup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/makeup"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxHair"
+        app:layout_constraintTop_toBottomOf="@+id/SearchActivityCategoriesTextView" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxNails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nails"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxMakeup"
+        app:layout_constraintTop_toBottomOf="@+id/SearchActivityCategoriesTextView" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxPedicure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pedicure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxHair" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxManicure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/manicure"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxPedicure"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxHair" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxEyebrows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/eyebrows"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxEyelashes"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPedicure" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/facial"
+        android:id="@+id/checkBoxFacial"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSolarium"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxEyelashes" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxSolarium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/solarium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxEyelashes" />
+
+    <CheckBox
+        android:background="@drawable/custom_check_box_white"
+        android:button="@android:color/transparent"
+        android:id="@+id/checkBoxEyelashes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/eyelashes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPedicure" />
+
+    <Button
+        android:background="@drawable/custom_button_dark"
+        android:id="@+id/SearchActivityButtonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchActivitySeekBarDistance" />
+
+    <SeekBar
+        android:id="@+id/SearchActivitySeekBarDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/colorPrimary"
+        android:progressTint="@color/colorPrimary"
+        android:thumbTint="@color/colorPrimary"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchActivityTextViewDistance" />
+
+    <TextView
+        android:id="@+id/SearchActivityTextViewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/distance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxFacial" />
+
+    <TextView
+        android:id="@+id/SearchActivityTextViewDistanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/SearchActivityTextViewDistance"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxFacial" />
+
+</android.support.constraint.ConstraintLayout>

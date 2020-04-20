@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddCompany.AddCompanyActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activityToolBar"
+        android:background="@color/colorPrimary"
+        android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_mint_menu_logo"/>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/mainActivityDrawerLayout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".AddCompany.AddCompanyActivity"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp">
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/add_company_text"
+                    android:textSize="24sp"
+                    android:id="@+id/companyInfo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/company_location_text"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/companyInfo"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/locationText"/>
+
+                <TextView
+                    android:id="@+id/addressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/get_address_from_map"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/locationText" />
+
+                <Button
+                    android:id="@+id/searchMapButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/custom_button_dark"
+                    android:text="@string/search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/locationText"
+                    app:layout_constraintTop_toBottomOf="@+id/companyInfo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/company_name"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/addressText"
+                    android:id="@+id/companyNameText"/>
+
+                <EditText
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="100dp"
+                    app:layout_constraintTop_toBottomOf="@id/companyNameText"
+                    android:id="@+id/companyNameEditText"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/categoriesText"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/companyNameEditText"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:text="@string/categories"/>
+
+                <CheckBox
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:width="120dp"
+                    android:textAlignment="center"
+                    android:id="@+id/checkBoxHair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hair"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/categoriesText"/>
+
+                <CheckBox
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:width="120dp"
+                    android:textAlignment="center"
+                    android:id="@+id/checkBoxMakeup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/makeup"
+                    app:layout_constraintStart_toEndOf="@+id/checkBoxHair"
+                    app:layout_constraintTop_toBottomOf="@+id/categoriesText" />
+
+                <CheckBox
+
+                    android:id="@+id/checkBoxNails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:width="120dp"
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:text="@string/nails"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxHair" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxPedicure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:width="120dp"
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:text="@string/pedicure"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxNails" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxEyebrows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:width="120dp"
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:text="@string/eyebrows"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toEndOf="@+id/checkBoxEyelashes"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxManicure" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxManicure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:width="120dp"
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:text="@string/manicure"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toEndOf="@+id/checkBoxPedicure"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxSolarium" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxEyelashes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:width="120dp"
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:text="@string/eyelashes"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxPedicure" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxSolarium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:width="120dp"
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:text="@string/solarium"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toEndOf="@+id/checkBoxNails"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxMakeup" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxFacial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:width="120dp"
+                    android:background="@drawable/custom_check_box_green"
+                    android:button="@android:color/transparent"
+                    android:text="@string/facial"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxEyelashes" />
+
+                <Button
+                    android:id="@+id/sendCompanyInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/custom_button_dark"
+                    android:text="@string/add_company"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxFacial" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.NavigationView
+            android:paddingTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:background="@color/colorPrimary"
+            app:menu="@menu/drawer_menu"
+            android:id="@+id/navigation_drawer">
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

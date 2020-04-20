@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item
+        android:title="@string/add_company"
+        android:id="@+id/drawer_menu_add_company" />
+
+    <item
+        android:title="Suosikit"
+        android:id="@+id/drawer_menu_followed_companies" />
+
+    <item
+        android:title="Paikannus"
+        android:id="@+id/drawer_menu_locate" />
+
+    <item
+        android:title="Kirjaudu ulos"
+        android:id="@+id/drawer_menu_log_out" />
+
+    <item
+        android:title="Kirjaudu sisään"
+        android:id="@+id/drawer_menu_log_in" />
+</menu>

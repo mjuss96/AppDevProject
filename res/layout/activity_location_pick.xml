@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCompany.LocationPickActivity" >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddCompany.LocationPickActivity" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="230dp">
+
+
+        <EditText
+            android:id="@+id/nearestAddress"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:inputType="textShortMessage"
+            android:hint="@string/address_here"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/custom_button"
+            android:layout_height="32dp"
+            android:id="@+id/acceptAddress"
+            android:layout_width="wrap_content"
+            android:text="OK" />
+
+        <Button
+            android:id="@+id/searchAddress"
+            android:layout_width="wrap_content"
+            android:background="@drawable/custom_button"
+            android:layout_height="32dp"
+            android:enabled="false"
+            android:visibility="gone"
+            android:text="@string/search"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
